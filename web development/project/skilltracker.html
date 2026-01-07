@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillTrackr - Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2b4747;
+      color: white;
+      padding: 100px;
+      text-align: center;
+      font-size: 24px;
+     
+    }
+    .container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .card:hover {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .button {
+      background-color: #4a90e2;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .button:hover {
+      background-color: #357ab8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="SkillTrackr Logo" style="height: 80px; vertical-align: middle; margin-right: 10px;">
+  SkillTrackr - Your DSA + Interview Prep Tracker
+  </header>
+  <div class="container">
+    <div class="card">
+      <h3>Add DSA Question</h3>
+      <p>Log a new DSA problem you've solved today.</p>
+      <form action="http://localhost:8080/api/dsa" method="post">
+        <input type="text" name="question" placeholder="Enter question title" required>
+        <br><br>
+        <input type="text" name="topic" placeholder="Enter topic" required>
+        <br><br>
+        <input type="text" name="difficulty" placeholder="Difficulty (Easy/Med/Hard)" required>
+        <br><br>
+        <input type="date" name="date" required>
+        <br><br>
+        <button class="button" type="submit">Add Question</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Track Daily Hours</h3>
+      <p>Record how many hours you studied today.</p>
+      <form action="http://localhost:8080/api/hours" method="post">
+        <input type="number" name="hours" placeholder="Enter hours" required>
+        <br><br>
+        <input type="date" name="date" required>
+        <br><br>
+        <button class="button" type="submit">Track Hours</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Interview Q&A</h3>
+      <p>Save HR and technical interview questions with answers.</p>
+      <form action="http://localhost:8080/api/interview" method="post">
+        <input type="text" name="question" placeholder="Enter question" required>
+        <br><br>
+        <textarea name="answer" rows="4" cols="30" placeholder="Enter answer" required></textarea>
+        <br><br>
+        <button class="button" type="submit">Add Q&A</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Daily Reflection</h3>
+      <p>Write what you learned and how you felt today.</p>
+      <form action="http://localhost:8080/api/reflection" method="post">
+        <textarea name="reflection" rows="4" cols="30" placeholder="Write your reflection..." required></textarea>
+        <br><br>
+        <input type="date" name="date" required>
+        <br><br>
+        <button class="button" type="submit">Reflect</button>
+      </form>
+    </div>
+    <div class="card">
+      <h3>Project Progress</h3>
+      <p>Update what progress you've made on your current projects.</p>
+      <form action="http://localhost:8080/api/project" method="post">
+        <input type="text" name="projectName" placeholder="Project name" required>
+        <br><br>
+        <textarea name="progress" rows="3" cols="30" placeholder="Today's progress" required></textarea>
+        <br><br>
+        <button class="button" type="submit">Update Project</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

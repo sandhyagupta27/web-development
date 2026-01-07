@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css practice set6.1 </title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: burlywood;
+            border: 2px solid black;
+        }
+@media (max-width: 300px) {
+    div{
+        background-color: cadetblue;
+    }
+}
+@media (min-width:300px) and (max-width:400px){
+    div{
+        background-color: rgb(179, 47, 170);
+    }
+}
+@media (min-width:400px) and (max-width:600px){
+    div{
+        background-color: rgb(219, 19, 19);
+    }
+}
+@media(min-width:600px){
+    div{
+        background-color: rgb(47, 95, 179);
+    }
+}
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

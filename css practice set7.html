@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    div{
+        height: 200px;
+        width: 200px;
+        background-color: rgb(142, 92, 190);
+        border: 2px solid black;
+        /* transition-property: all; */
+        /* transition-duration: 2s;
+        /* transition-timing-function: steps(3); */
+        /* transition-timing-function: ease-in;
+        transition-delay: 1s; */ 
+        position: absolute;
+        top: 300px;
+        left: 500px;
+        /* transform: rotate(45deg); */
+        /* rotate:x 180deg; */
+        /* transform: scale(2,1); */
+        transition: all 5s ease-in ;
+        
+    }
+    /* div:hover mtlb cursor ko move krme par kya hoga */
+    div:hover{
+        background-color: rgb(71, 116, 7);
+        color:white; 
+        font-size: 25px; 
+        /* transform: scaleY(2); */
+        /* transform:rotate(180deg) ; */
+        /* transform: translate(100px,80px) */
+        transform: skew(45deg);
+    }
+    /* div:active mtlb cursor ko click krege to vo active ho jega mtlb colour change */
+    div:active{
+        background-color: rgb(192, 30, 210);
+    }
+    
+    </style>
+</head>
+<body>
+    <div>this is a div</div>
+</body>
+</html>
+
+Transitions:
+transitions enable you to define the transition between two states of an element
+
+
+.transition-property: Property you want to transition(font-size,width etc).
+.transition-duration:2s/4ms...
+.transition-timing-function:easein/ease out/linear/steps...
+.transition delay:2s/4ms
+
+Transition Shorthand
+property name|duration|timing-function|delay
+
+
+CSS Transform:
+used to apply 2D&3D transformations to an element
+.rotate}
+
+transform:rotate(45deg);
+
+
+rotate:45deg 
+rotatex:45deg 
+rotatey:45deg 
+rotatez:45deg
+
+
+.scale}
+
+transform:scale(2)
+transform:scale(0.5)
+transform:scale(1.2)
+
+transform: scalex(0.5);
+transform: scaley(0.5);
+
+translate}
+
+transform:translate(20px)
+transform:translate(20px,50px)
+ransform:translate x(20px);
+ransform:translate Y(20px);

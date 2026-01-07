@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        #container {
+            height: 600px;
+            width: 600px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            /* align-items: flex-start; */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            border: 2px solid black;
+            height: 100px;
+            width: 150px;
+            display: inline-block;
+            
+            /* flexdirection-row/column/rowreverse/columnreverse */
+           
+
+        }
+
+        #box1 {
+            background-color: rgb(97, 32, 97);
+        }
+
+        #box2 {
+            background-color: rgb(126, 55, 126);
+            height: 200px;
+        }
+
+        #box3 {
+            background-color: rgb(137, 72, 137);
+            height: 75px;
+        }
+
+        #box4 {
+            background-color: rgb(210, 126, 210);
+        }
+        #box5{
+            background-color: rgb(234, 156, 234);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flexbox playground</h1>
+    <div id="container">
+        <div id="box1">box1</div>
+        <div id="box2">box2</div>
+        <div id="box3">box3</div>
+        <div id="box4">box4</div>
+        <div id="box5">box5</div>
+    </div>
+</body>
+
+</html>
+'
+
+<!-- flex properties:
+
+justify-content': allignment along the main axis   /flex-start  /flex-end/center/space-around
+
+flex-wrap: nowwrap/wrap/wrap-reverse  
+allign items: allignment along th cross axis
+alligncontent: allignment of space between & around the content -->
+
+<!-- flex-properties:
+
+.align-self: allinment of individual along the cross axis
+.flex-grow: how much a flex item  will grow relative to the rest of the flex items if space is available 
+.flex-shrink:how much a flex item will shrink relative to the  -->

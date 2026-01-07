@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 2</title>
+</head>
+<body>
+    <h1 class="name-display"></h1>
+    <p class="total-bill"></p>
+    <button onclick="showName()">press me</button>
+
+    <button onclick="total()">totalamount</button>
+    
+    <script>
+        function showName(){
+        let myName = 'Sandhya';
+        document.querySelector('.name-display').innerText = `${myName}`;
+        }
+
+
+        function total(){
+        const GSTpercentage = 5;
+        let totalCost =  Math.round(((15599-(10/100*15599))-272+(2499-(41/100*2499))-29+25+20)*(100+GSTpercentage)/100);
+
+        document.querySelector('.total-bill').innerText=totalCost;
+        }
+        
+    </script>
+    
+</body>
+</html>

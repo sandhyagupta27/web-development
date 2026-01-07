@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket game</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+   
+</style>
+<body>
+   <h1>Bat Ball Stump Game</h1>
+
+   <!-- this is for when user button choice is bat -->
+
+   <button onclick =" 
+   //This will genenrate random number between 0 To 3;
+   let randomNumber = Math.random()*3;
+   let computerChoice;
+ 
+   if(randomNumber>0 && randomNumber<=1){
+     computerChoice ='Bat';
+    // console.log('computerChoice is bat');
+   }else if(randomNumber >1 && randomNumber<=2){
+     computerChoice ='Ball';
+    // console.log('computerChoice is Ball');
+   }else{
+     computerChoice='Stump';
+    // console.log('computerChoice is Stump');
+   }
+  let resultMsg;
+   if(computerChoice ==='Ball'){
+    resultMsg='user won'
+   }else if(computerChoice ==='Bat'){
+    resultMsg ='match ties';
+   }else if(computerChoice==='Stump'){
+    resultMsg='computer won';
+   }
+
+   alert(`You have chosen Bat.Computer choice is ${computerChoice} and ${resultMsg}`)
+
+   ">Bat</button>
+
+    <!-- this is for when user button choice is Ball -->
+     
+   <button onclick="
+    //This will genenrate random number between 0 To 3
+    randomNumber = Math.random()*3;
+ 
+   if(randomNumber>0 && randomNumber<=1){
+     computerChoice ='Bat';
+    // console.log('computerChoice is bat');
+   }else if(randomNumber >1 && randomNumber<=2){
+     computerChoice ='Ball';
+    // console.log('computerChoice is Ball');
+   }else{
+     computerChoice='Stump';
+    // console.log('computerChoice is Stump');
+   }
+ 
+   if(computerChoice ==='Ball'){
+    resultMsg='match ties'
+   }else if(computerChoice ==='Bat'){
+    resultMsg ='computer won';
+   }else if(computerChoice==='Stump'){
+    resultMsg='user won';
+   }
+
+   alert(`You have chosen Ball.Computer choice is ${computerChoice} and ${resultMsg}`);
+   ">Ball</button>
+
+   <!-- this is for when user button choice is stump -->
+
+   <button onclick="
+   //This will genenrate random number between 0 To 3;
+      randomNumber = Math.random()*3;
+     
+   if(randomNumber>0 && randomNumber<=1){
+     computerChoice ='Bat';
+    // console.log('computerChoice is bat');
+   }else if(randomNumber >1 && randomNumber<=2){
+     computerChoice ='Ball';
+    // console.log('computerChoice is Ball');
+   }else{
+     computerChoice='Stump';
+    // console.log('computerChoice is Stump');
+   }
+   
+   if(computerChoice ==='Ball'){
+    resultMsg='computer won'
+   }else if(computerChoice ==='Bat'){
+    resultMsg ='user won';
+   }else if(computerChoice==='Stump'){
+    resultMsg='match ties';
+   }
+
+   alert(`You have chosen stump. Computer choice is ${computerChoice} and ${resultMsg}`);
+
+   ">Stump</button>
+</body> 
+</html>

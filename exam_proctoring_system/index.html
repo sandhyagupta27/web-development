@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Exam Proctoring System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="loginSection" class="section active">
+        <div class="login-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <h1>Secure Exam Proctor</h1>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <div class="security-notice">
+                <i class="fas fa-lock"></i>
+                <p>This system monitors for academic integrity violations</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Section -->
+    <div id="dashboardSection" class="section">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>Exam Proctor</span>
+            </div>
+            <div class="nav-user">
+                <span id="userDisplayName">Welcome, User</span>
+                <button id="logoutBtn" class="btn-secondary">Logout</button>
+            </div>
+        </nav>
+
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Welcome to Your Exam Dashboard</h2>
+                <p>Select an exam to begin or view your performance analytics</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Available Exams -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-file-alt"></i> Available Exams</h3>
+                    <div id="availableExams" class="exam-list">
+                        <!-- Exams will be populated here -->
+                    </div>
+                </div>
+
+                <!-- Performance Analytics -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-chart-line"></i> Performance Analytics</h3>
+                    <div class="analytics-summary">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalExams">0</span>
+                            <span class="stat-label">Exams Taken</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="avgScore">0%</span>
+                            <span class="stat-label">Average Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="rank">-</span>
+                            <span class="stat-label">Current Rank</span>
+                        </div>
+                    </div>
+                    <div class="weak-areas">
+                        <h4>Weak Areas</h4>
+                        <div id="weakAreasList">
+                            <!-- Weak areas will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leaderboard -->
+                <div class="dashboard-card">
+                    <h3><i class="fas fa-trophy"></i> Leaderboard</h3>
+                    <div id="leaderboard" class="leaderboard-list">
+                        <!-- Leaderboard will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Section -->
+    <div id="examSection" class="section">
+        <div class="exam-header">
+            <div class="exam-info">
+                <h2 id="examTitle">Exam Title</h2>
+                <p id="examDescription">Exam Description</p>
+            </div>
+            <div class="exam-timer">
+                <div class="timer-display">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">00:00:00</span>
+                </div>
+                <div class="progress-bar">
+                    <div id="timerProgress" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exam-content">
+            <div class="question-container">
+                <div class="question-header">
+                    <span id="questionNumber">Question 1</span>
+                    <span id="questionCount">of 10</span>
+                </div>
+                <div id="questionText" class="question-text">
+                    <!-- Question text will be populated here -->
+                </div>
+                <div id="questionOptions" class="question-options">
+                    <!-- Options will be populated here -->
+                </div>
+            </div>
+
+            <div class="exam-navigation">
+                <button id="prevBtn" class="btn-secondary">Previous</button>
+                <div class="question-indicators" id="questionIndicators">
+                    <!-- Question indicators will be populated here -->
+                </div>
+                <button id="nextBtn" class="btn-primary">Next</button>
+            </div>
+
+            <div class="exam-actions">
+                <button id="submitExamBtn" class="btn-danger">Submit Exam</button>
+            </div>
+        </div>
+
+        <!-- Proctoring Warnings -->
+        <div id="proctoringWarnings" class="proctoring-warnings">
+            <div class="warning-item" id="tabSwitchWarning" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Tab switching detected! This will be reported.</span>
+            </div>
+            <div class="warning-item" id="fullscreenWarning" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Please exit fullscreen mode to continue the exam.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="resultsSection" class="section">
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Exam Results</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="finalScore">0%</span>
+                    </div>
+                    <div class="score-details">
+                        <p>Correct Answers: <span id="correctAnswers">0</span></p>
+                        <p>Total Questions: <span id="totalQuestions">0</span></p>
+                        <p>Time Taken: <span id="timeTaken">00:00:00</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-breakdown">
+                <h3>Performance Breakdown</h3>
+                <div id="resultsBreakdown" class="breakdown-list">
+                    <!-- Results breakdown will be populated here -->
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button id="viewLeaderboardBtn" class="btn-primary">View Leaderboard</button>
+                <button id="takeAnotherExamBtn" class="btn-secondary">Take Another Exam</button>
+                <button id="backToDashboardBtn" class="btn-secondary">Back to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Confirmations -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Confirm Action</h3>
+            <p id="modalMessage">Are you sure you want to proceed?</p>
+            <div class="modal-actions">
+                <button id="modalCancel" class="btn-secondary">Cancel</button>
+                <button id="modalConfirm" class="btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* h1{
+    color: brown;
+}
+p{
+    color: cadetblue;
+}
+button{
+    color: maroon;
+    background-color: cyan;
+}
+body{
+    background-color: rgb(92, 81, 81);
+} */
+*{
+    color:black;
+ }
+
+#sumit{
+    color: cornflowerblue;
+    font-weight:  normal;
+}
+#Mayank{
+    color: blue;
+    font-weight: bold;
+}
+.chiku{
+    color: darkorchid;
+    font-weight:lighter;
+}
+
+ button{
+    color: brown;
+ }
+ #box{
+    background-color:burlywood;
+ }
+ .heading{
+    color: darkred;
+ }
+ #one{
+    color: rgb(105, 67, 105);
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+ }
+ h4{
+    color: black;
+    text-align: center;
+     text-decoration:  blue underline;
+    /* text-decoration:  line-through;  */
+ }
+ a{
+    text-decoration: none;
+ }
+ #two{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;
+ }
+/* 96px= 1inch=2.54cm */
+/* font-size=2px */
+#three{
+    font-size: 25px;
+    line-height: 50px;
+    /* text-transform:uppercase; */
+    text-transform: capitalize;
+}
+
+#four{
+    font-size: 10px;
+    line-height: 80px;
+
+}
