@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age =21;
+function printAge(){
+console.log(`your age is ${age}`)
+}
+printAge();
+
+age=76;
+printAge();
+age=1;
+printAge();
+
+
+function generateRandomMove(){
+    let random = Math.random();
+    let randomMove = random * 3;
+    return randomMove;
+}
+console.log(generateRandomMove());
+console.log(generateRandomMove());
+console.log(generateRandomMove());
+console.log(generateRandomMove());
+console.log(generateRandomMove());
+console.log(generateRandomMove());
+
+
+function detremineDriveStatus(){
+    let age = 21;
+    let status;
+    if(age>18){
+        status='You can drive';
+    }else{
+        status='you cannot drive';
+    }
+    return status;
+}
+
+    </script>
+</body>
+</html>

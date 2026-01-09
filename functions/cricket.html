@@ -1,0 +1,81 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket game</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+   
+</style>
+<body>
+   <h1>Bat Ball Stump Game</h1>
+
+   <!-- this is for when user button choice is bat -->
+
+   <button onclick =" 
+  generateComputerChoice();
+  let resultMsg;
+   if(computerChoice ==='Ball'){
+    resultMsg='user won'
+   }else if(computerChoice ==='Bat'){
+    resultMsg ='match ties';
+   }else if(computerChoice==='Stump'){
+    resultMsg='computer won';
+   }
+
+   alert(`You have chosen Bat.Computer choice is ${computerChoice} and ${resultMsg}`)
+
+   ">Bat</button>
+
+    <!-- this is for when user button choice is Ball -->
+     
+   <button onclick="
+    generateComputerChoice
+   if(computerChoice ==='Ball'){
+    resultMsg='match ties'
+   }else if(computerChoice ==='Bat'){
+    resultMsg ='computer won';
+   }else if(computerChoice==='Stump'){
+    resultMsg='user won';
+   }
+
+   alert(`You have chosen Ball.Computer choice is ${computerChoice} and ${resultMsg}`);
+   ">Ball</button>
+
+   <!-- this is for when user button choice is stump -->
+
+   <button onclick="
+    generateComputerChoice();
+   if(computerChoice ==='Ball'){
+    resultMsg='computer won'
+   }else if(computerChoice ==='Bat'){
+    resultMsg ='user won';
+   }else if(computerChoice==='Stump'){
+    resultMsg='match ties';
+   }
+
+   alert(`You have chosen stump. Computer choice is ${computerChoice} and ${resultMsg}`);
+
+   ">Stump</button>
+
+   <script>
+    let computerChoice;
+    function generateComputerChoice(){
+      let randomNumber = Math.random()*3;
+   if(randomNumber>0 && randomNumber<=1){
+     computerChoice ='Bat';
+   }else if(randomNumber >1 && randomNumber<=2){
+     computerChoice ='Ball';
+   }else{
+     computerChoice='Stump';
+
+   }
+    }
+
+   </script>
+</body> 
+</html>
