@@ -33,7 +33,10 @@ console.log(generateRandomMove());
 
 
 function detremineDriveStatus(){
-    let age = 21;
+    let age;
+    if(age === undefined){
+        return 'Aap avtar hai'
+    }
     let status;
     if(age>18){
         status='You can drive';
@@ -42,6 +45,8 @@ function detremineDriveStatus(){
     }
     return status;
 }
+
+console.log(detremineDriveStatus());
 
     </script>
 </body>
